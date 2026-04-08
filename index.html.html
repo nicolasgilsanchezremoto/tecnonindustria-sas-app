@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysicTech Pro | Solución Industrial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PhysicTech Pro</h1>
+        <p>Optimización para TecnoIndustria S.A.S.</p>
+    </header>
+
+    <nav>
+        <a href="#problema">Problema</a>
+        <a href="#software">Software Funcional</a>
+        <a href="#principios">Principios Físicos</a>
+        <a href="#equipo">Equipo</a>
+    </nav>
+
+    <main>
+        <section id="problema">
+            <h2>Problema Identificado</h2>
+            <p>TecnoIndustria S.A.S. presenta ineficiencias en el control de variables críticas como temperatura y presión, lo que genera desperdicio de recursos y altos costos operativos.</p>
+        </section>
+
+        <section id="software">
+            <h2>Calculadora de Optimización Industrial</h2>
+            <div class="card">
+                <h3>Cálculo de Caudal Volumétrico ($Q = V / t$)</h3>
+                <input type="number" id="vol" placeholder="Volumen (m³)">
+                <input type="number" id="time" placeholder="Tiempo (s)">
+                <button onclick="calcCaudal()">Calcular Caudal</button>
+                <p id="resCaudal" class="result"></p>
+            </div>
+
+            <div class="card">
+                <h3>Eficiencia Energética ($\eta$)</h3>
+                <input type="number" id="eUtil" placeholder="Energía Útil (J)">
+                <input type="number" id="eTotal" placeholder="Energía Total (J)">
+                <button onclick="calcEficiencia()">Calcular Eficiencia</button>
+                <p id="resEficiencia" class="result"></p>
+            </div>
+            
+            <p><em>* El software permite además convertir temperaturas y calcular presión hidráulica en tiempo real[cite: 7, 21].</em></p>
+        </section>
+
+        <section id="principios">
+            <h2>Principios Físicos Aplicados</h2>
+            <ul>
+                <li><strong>Termodinámica:</strong> Control de calor y escalas térmicas.</li>
+                <li><strong>Mecánica de Fluidos:</strong> Dinámica de presiones y caudales.</li>
+                <li><strong>Conservación de Energía:</strong> Cálculo de energía potencial y eficiencia del sistema.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        function calcCaudal() {
+            const v = document.getElementById('vol').value;
+            const t = document.getElementById('time').value;
+            if(t > 0) {
+                const q = v / t;
+                document.getElementById('resCaudal').innerText = `Caudal: ${q.toFixed(2)} m³/s`;
+            }
+        }
+
+        function calcEficiencia() {
+            const eu = document.getElementById('eUtil').value;
+            const et = document.getElementById('eTotal').value;
+            if(et > 0) {
+                const eff = (eu / et) * 100;
+                document.getElementById('resEficiencia').innerText = `Rendimiento: ${eff.toFixed(2)}%`;
+            }
+        }
+    </script>
+</body>
+</html>
