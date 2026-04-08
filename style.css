@@ -1,0 +1,121 @@
+:root {
+    --primary: #00324b; /* Color SENA/Industrial */
+    --accent: #39a900;  /* Verde éxito */
+    --bg: #eef2f5;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary) 0%, #005682 100%);
+    color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo-icon {
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--primary);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 0;
+    color: var(--primary);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: var(--accent);
+}
+
+.result {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f0fdf4;
+    border-radius: 4px;
+    color: #166534;
+    font-weight: bold;
+    text-align: center;
+    min-height: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 0.85rem;
+}
